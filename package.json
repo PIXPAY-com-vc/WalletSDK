@@ -1,0 +1,22 @@
+{
+  "name": "digitalhorizon-hdwallet-sdk",
+  "version": "1.0.0",
+  "description": "An SDK for generating and managing Hierarchical Deterministic (HD) wallets securely. Includes features for wallet creation, encryption, decryption, key derivation, and transaction signing. Seamlessly integrates with SmartPay for efficient and secure cryptocurrency transactions. Ideal for developers building blockchain applications, decentralized finance (DeFi) platforms, and crypto payment solutions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'No tests specified'",
+    "build": "babel src -d dist",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "sdk",
+    "blockchain",
+    "ethereum",
+    "crypto"
+  ],
+  "author": "Digital Horizon",
+  "license": "MIT",
+  "dependencies": {
+    "ethers": "^5.0.0"
+  }
+}
