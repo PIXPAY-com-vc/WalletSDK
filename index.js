@@ -10,6 +10,9 @@ const customjsonFilePath = "./wallet.json";
 (async () => {
     const { publicKey,privateKey, mnemonic, jsonFilePath } = await WalletGenerator.generateRandomWallet(password,customjsonFilePath);
 
+    // Remove the '0x' prefix from the public key if it exists
+    const cleanedPublicKey = publicKey.startsWith('0x') ? publicKey.slice(2) : publicKey;
+
     // Display the generated wallet mnemonic
     console.log("###############################################");
     console.log("Generated HDWallet Mnemonic (Seed Phrase):", mnemonic);
@@ -17,7 +20,7 @@ const customjsonFilePath = "./wallet.json";
     console.log("Instructions: Your Password will be used to decrypt the json file and derive wallets, store it on a enviroment variable on your application.");
     console.log("Wallet saved as JSON:", jsonFilePath);
     console.log("###############################################");
-    console.log("(optional) Hot Public Key:", publicKey);
+    console.log("(optional) Hot Public Key:", cleanedPublicKey);
     console.log("(optional) Hot Private Key:", privateKey);
     console.log("Instructions: Optionally use above generated Hot Wallet for your platform, using this Public Key without 0x for encryption/decryption memo transmission, or if you already has one use its Public Key instead.");
     console.log("###############################################");
