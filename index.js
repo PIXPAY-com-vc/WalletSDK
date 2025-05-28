@@ -2,7 +2,7 @@ const fs = require('fs');
 const WalletGenerator = require('./WalletGenerator');
 
 // Set your desired password and file path
-const password = "p@$$word";
+const password = "zxqwejitgh[opiqwe90@!lkaspk#3a26";
 
 const customjsonFilePath = "./wallet.json";
 
